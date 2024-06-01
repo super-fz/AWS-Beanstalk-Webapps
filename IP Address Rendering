@@ -1,0 +1,6 @@
+#!/bin/bash
+yum update -y
+yum -y install httpd
+systemctl enable httpd
+systemctl start httpd
+echo "This is server $(hostname -f)" > /var/www/html/index.html
